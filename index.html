@@ -6,35 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apartment Selling Website</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootStrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Google Fonts -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <!-- Custom CSS -->
     <style>
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
-        }
-
-        body {
-            background-image: url();
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
         body {
             font-family: 'Noto Sans Armenian', 'Open Sans', 'Lucida Grande', Tahoma, Arial, sans-serif;
-            font-size: 12px;
+            font-size: 15px;
             color: #000;
             line-height: 1.5;
-            background-color: #513ee3;
-            margin: 0;
+            background-color: #fff;
             padding: 60px 0 80px 0;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            background: url(img/background.JPG) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .navbar {
+            background-color: #1a3667;
+        }
+
+
+
+        /* .navbar-nav .nav-link {
+            color: #fff;
+        } */
+
+        .centered-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: #1A3667;
+            padding: 30px 10px;
+        }
+
+        .centered-content h5 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
         }
 
         .container {
@@ -45,7 +61,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            padding: 0 10px;
+            padding: 20px 0;
         }
 
         .apartment-card {
@@ -55,6 +71,7 @@
             overflow: hidden;
             margin: 10px;
             transition: transform 0.3s, box-shadow 0.3s;
+            width: 250px;
         }
 
         .apartment-card:hover {
@@ -79,6 +96,7 @@
         }
 
         .card-body {
+
             padding: 10px;
         }
 
@@ -100,138 +118,96 @@
             }
         }
 
-        body .centered-content {
+        .contact-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            margin-top: 100px;
-            /* Adjust as needed to move content further down from the top */
-        }
-
-        .navbar-nav {
-            margin-left: auto;
-            padding-right: 20px;
-            /* Aligns the nav items to the right */
-        }
-
-        .navbar-nav .nav-link {
-            text-align: left;
-            padding: 10px 15px;
-            position: relative;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .navbar-nav .nav-link:after {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 0%;
-            content: '.';
-            height: 1px;
-            transition: width 0.3s;
-        }
-
-        .navbar-nav .nav-link:hover:after {
-            width: 100%;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #3d297c;
-            z-index: 1;
-        }
-
-        .navbar-nav .nav-link:hover:after {
-            z-index: -10;
-            animation: fill 1s forwards;
-            opacity: 1;
-        }
-
-        @keyframes fill {
-            0% {
-                width: 0;
-                background: #007bff;
-            }
-
-            100% {
-                width: 100%;
-                background: #007bff;
-            }
-        }
-
-        .footer-links {
-            text-decoration: none;
-        }
-
-        /* Aligns text within the nav links to the left */
-        .navbar-brand {
-            padding-left: 20px;
-        }
-
-        footer .row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 50px 0;
         }
 
         .contact-form {
-            max-width: 400px;
-            margin: 50px auto;
+            max-width: 500px;
             padding: 20px;
             background: transparent;
         }
 
-        html {
-            scroll-behavior: smooth;
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .map-container {
+            min-width: 300px;
+            max-width: 100%;
+            height: 300px;
+            /* Adjust the height of the map */
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        h1 {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            color: #1A3667;
+            border: #f8f9fa;
+        }
+
+        h5 {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .transparent-field {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ced4da;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <!-- Brand Name -->
-        <a class="navbar-brand" href="index.html">Hax</a>
-        <!-- Toggler for mobile view -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand h6 ml-3 text-white-50" href="index.html">SpotlightLiving</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <!-- Aligning the nav items to the right -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link h6 text-white-50" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#listings">Listings</a>
+                    <a class="nav-link h6 text-white-50" href="#listings">Listings</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link h6 text-white-50" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Centered Content Block Under Navbar -->
-    <div class="centered-content text-white-50 py-4 px-5">
-        <div>
-            <h5 class="display-6 text-uppercase">Find Your Home with Hax’s International Realty</h5>
-            <p>If you are considering a move to Yerevan, it would be our privilege to help you facilitate your best
-                outcome.</p>
-        </div>
+    <div class="centered-content">
+        <h5 class=" text-uppercase">Find Your Home with SpotlightLiving
+            International
+            Realty</h5>
+        <p>If you are considering a move to Yerevan, it would be our privilege to help you facilitate your best outcome.
+        </p>
     </div>
 
-    <!-- Main Content -->
     <div class="container mt-5">
         <div class="row">
-            <!-- Apartment Listing 1 -->
-            <div class="col-md-">
+            <div class="col-md-4">
                 <div class="card mb-4">
                     <img src="img/modern appartment.jpg" class="card-img-top" alt="Apartment 1">
                     <div class="card-body">
@@ -241,10 +217,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Apartment Listing 2 -->
-            <div class="col-md-">
+            <div class="col-md-4">
                 <div class="card mb-4">
-                    <img src="img/great view.jpg" class="card-img-top" alt="Apartment 2">
+                    <img src="img/great view.jpeg" class="card-img-top" alt="Apartment 2">
                     <div class="card-body">
                         <h5 class="card-title">Spacious Apartment</h5>
                         <p class="card-text">A spacious apartment with a great view.</p>
@@ -252,8 +227,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Apartment Listing 3 -->
-            <div class="col">
+            <div class="col-md-4">
                 <div class="card mb-4">
                     <img src="img/luxury.jpeg" class="card-img-top" alt="Apartment 3">
                     <div class="card-body">
@@ -265,147 +239,159 @@
             </div>
         </div>
     </div>
-
     <!-- CONTACT US -->
-    <div class="container" id="contact">
-        <div class="contact-form">
-            <h2 class="text-center" style="margin-top: 80px;">Contact Us</h2>
-            <form>
-                <div class="form-group">
-                    <label for="name">Your Name *</label>
-                    <input type="text" class="form-control" id="name" required>
+    <div class="container my-4">
+        <h1>Contact Us</h1>
+        <div class="fs-6 fw-light mb-2">Post your message below. We will get back to you ASAP</div>
+        <form id="contact_form" name="contact_form" method="post">
+            <div class="mb-5">
+                <label for="message">Message</label>
+                <textarea class="form-control transparent-field" id="message" name="message" rows="5"></textarea>
+            </div>
+            <div class="mb-5 row">
+                <div class="col-md-6">
+                    <label>Your Name:</label>
+                    <input type="text" required maxlength="50" class="form-control transparent-field" id="name"
+                        name="name">
                 </div>
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" class="form-control" id="email" required>
+                <div class="col-md-6">
+                    <label for="email_addr">Your Email:</label>
+                    <input type="email" required maxlength="50" class="form-control transparent-field" id="email_addr"
+                        name="email" placeholder="name@example.com">
                 </div>
-                <div class="form-group">
-                    <label for="phone">Your Phone Number *</label>
-                    <input type="tel" class="form-control" id="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="question">Your Question *</label>
-                    <textarea class="form-control" id="question" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Send</button>
-            </form>
-        </div>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-success">Post</button>
+            </div>
+        </form>
     </div>
 
-    <!-- Apartment Listings Section -->
-    <div class="container" id="listings">
-        <h1 class="text-center mb-4" style="margin-top: 100px ;"> Compact Apartment Listings </h1>
+
+    <div class="container" id="listings" style="padding: 1px;">
+        <h1 class="text-center mb-4" style="margin-top: 50px;">Compact Apartment Listings</h1>
         <div class="apartment-list">
             <!-- Apartment 1 -->
-            <div class="apartment-card card" style="width: 250px;">
-                <img src="https://via.placeholder.com/250x150?text=Sunny+Meadows+Studio" class="card-img-top"
-                    alt="Sunny Meadows Studio">
+            <div class="apartment-card card">
+                <img src="img/studio.jpeg" class="card-img-top" alt="Sunny Meadows Studio">
                 <div class="card-header">
                     <h5 class="card-title">Sunny Meadows Studio</h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text">A cozy studio apartment with ample natural light, a modern kitchen, and
-                        a charming balcony overlooking a serene garden.</p>
+                        a
+                        charming balcony overlooking a serene garden.</p>
                     <p class="price">$1,200/month</p>
                 </div>
             </div>
             <!-- Apartment 2 -->
-            <div class="apartment-card card" style="width: 250px;">
-                <img src="https://via.placeholder.com/250x150?text=Urban+Loft" class="card-img-top" alt="Urban Loft">
+            <div class="apartment-card card">
+                <img src="img/studio1.jpg" class="card-img-top" alt="Urban Loft">
                 <div class="card-header">
                     <h5 class="card-title">Urban Loft</h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text">A stylish loft with high ceilings, exposed brick walls, and large
-                        windows. Perfect for city living with easy access to local cafes and shops.</p>
+                        windows.
+                        Perfect for city living with easy access to local cafes and shops.</p>
                     <p class="price">$2,500/month</p>
                 </div>
             </div>
             <!-- Apartment 3 -->
-            <div class="apartment-card card" style="width: 250px;">
-                <img src="https://via.placeholder.com/250x150?text=Parkside+One-Bedroom" class="card-img-top"
-                    alt="Parkside One-Bedroom">
+            <div class="apartment-card card">
+                <img src="img/studio2.jpg" class="card-img-top" alt="Parkside One-Bedroom">
                 <div class="card-header">
                     <h5 class="card-title">Parkside One-Bedroom</h5>
                 </div>
                 <div class="card-body">
-                    <p class="card-text">A spacious one-bedroom apartment located next to Central Park.
-                        Features include hardwood floors, a private patio, and modern amenities.</p>
-                    <p class="price">$1,800/month</p>
+                    <p class="card-text">Charming one-bedroom apartment located next to a beautiful park.
+                        Features
+                        include hardwood floors, a spacious bedroom, and a cozy living room.</p>
+                    <p class="price">$1,500/month</p>
                 </div>
             </div>
             <!-- Apartment 4 -->
-            <div class="apartment-card card" style="width: 250px;">
-                <img src="https://via.placeholder.com/250x150?text=Riverfront+Two-Bedroom" class="card-img-top"
-                    alt="Riverfront Two-Bedroom">
+            <div class="apartment-card card">
+                <img src="img/studio3.jpg" class="card-img-top" alt="Riverside Two-Bedroom">
                 <div class="card-header">
-                    <h5 class="card-title">Riverfront Two-Bedroom</h5>
+                    <h5 class="card-title">Riverside Two-Bedroom</h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text">Elegant two-bedroom apartment with stunning river views, a gourmet
-                        kitchen, and a large living area. Ideal for families or professionals.</p>
+                        kitchen, and
+                        a large living area. Ideal for families or professionals.</p>
                     <p class="price">$3,200/month</p>
                 </div>
             </div>
             <!-- Apartment 5 -->
-            <div class="apartment-card card" style="width: 250px;">
-                <img src="https://via.placeholder.com/250x150?text=Downtown+Penthouse" class="card-img-top"
-                    alt="Downtown Penthouse">
+            <div class="apartment-card card">
+                <img src="img/studio4.jpeg" class="card-img-top" alt="Downtown Penthouse">
                 <div class="card-header">
                     <h5 class="card-title">Downtown Penthouse</h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text">Luxurious penthouse offering panoramic city views, a private rooftop
-                        terrace, and high-end finishes. Perfect for those seeking exclusivity.</p>
+                        terrace,
+                        and high-end finishes. Perfect for those seeking exclusivity.</p>
                     <p class="price">$5,500/month</p>
                 </div>
             </div>
             <!-- Apartment 6 -->
-            <div class="apartment-card card" style="width: 250px;">
-                <img src="https://via.placeholder.com/250x150?text=Cozy+Cottage+Apartment" class="card-img-top"
-                    alt="Cozy Cottage Apartment">
+            <div class="apartment-card card">
+                <img src="img/studio5.jpeg" class="card-img-top" alt="Cozy Cottage Apartment">
                 <div class="card-header">
                     <h5 class="card-title">Cozy Cottage Apartment</h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text">A charming one-bedroom apartment with a cottage-like feel. Features
-                        include a quaint kitchen, garden access, and a peaceful neighborhood.</p>
+                        include a
+                        quaint kitchen, garden access, and a peaceful neighborhood.</p>
                     <p class="price">$1,000/month</p>
                 </div>
             </div>
             <!-- Apartment 7 -->
-            <div class="apartment-card card" style="width: 250px;">
-                <img src="https://via.placeholder.com/250x150?text=Modern+High-Rise" class="card-img-top"
-                    alt="Modern High-Rise">
+            <div class="apartment-card card">
+                <img src="img/studio6.jpg" class="card-img-top" alt="Modern High-Rise">
                 <div class="card-header">
                     <h5 class="card-title">Modern High-Rise</h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text">A sleek apartment in a contemporary high-rise building with amenities
-                        like a gym, pool, and concierge service.</p>
+                        like a
+                        gym, pool, and concierge service.</p>
                     <p class="price">$2,200/month</p>
                 </div>
             </div>
             <!-- Apartment 8 -->
-            <div class="apartment-card card" style="width: 250px;">
-                <img src="https://via.placeholder.com/250x150?text=Historic+Brownstone" class="card-img-top"
-                    alt="Historic Brownstone">
+            <div class="apartment-card card">
+                <img src="img/studio7.jpg" class="card-img-top" alt="Historic Brownstone">
                 <div class="card-header">
                     <h5 class="card-title">Historic Brownstone</h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text">A beautifully restored historic brownstone with original architectural
-                        details, high ceilings, and a classic charm.</p>
+                        details,
+                        high ceilings, and a classic charm.</p>
                     <p class="price">$2,800/month</p>
                 </div>
             </div>
         </div>
     </div>
-
+    </div>
+    </div>
+    <div class="container my-4">
+        <!-- Map Section -->
+        <div class="map-container my-4">
+            <!-- Example Google Maps Embed -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.529488852044!2d-122.42067968468105!3d37.77595167975914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f15e4d51b%3A0x14a0744b7a3e69d5!2s1600+Pine+St%2C+San+Francisco%2C+CA+94109%2C+USA!5e0!3m2!1sen!2sus!4v1643245943343!5m2!1sen!2sus"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
