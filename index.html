@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotlightLiving</title>
+    <link rel="stylesheet" href="/css/finalProject.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand h6 ml-3 text-white-50" href="index.html">SpotlightLiving</a>
+        <button class="navbar-toggler" type="button"></button>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link h6 text-white-50" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link h6 text-white-50" href="#listings">Listings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link h6 text-white-50" href="#contact us">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="centered-content">
+        <h5 class=" text-uppercase">Find Your Home with SpotlightLiving
+            International
+            Realty</h5>
+        <p>If you are considering a move to Yerevan, it would be our privilege to help you facilitate your best outcome.
+        </p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/modern appartment.jpg" class="card-img-top" alt="Apartment 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Modern Apartment</h5>
+                        <p class="card-text">A beautiful apartment located in the heart of city.</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/great view.jpeg" class="card-img-top" alt="Apartment 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Spacious Apartment</h5>
+                        <p class="card-text">A spacious apartment with a great view.</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/luxury.jpeg" class="card-img-top" alt="Apartment 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Luxury Apartment</h5>
+                        <p class="card-text">A luxurious apartment with top-notch amenities.</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-4" id="contact us">
+        <h1>Contact Us</h1>
+        <div class="fs-6 fw-light mb-2 contactM">Post your message below. We will get back to you ASAP</div>
+        <form id="contact_form" name="contact_form" method="post">
+            <div class="mb-5">
+                <label for="message">Message</label>
+                <textarea class="form-control transparent-field" id="message" name="message" rows="5"></textarea>
+            </div>
+            <div class="mb-5 row">
+                <div class="col-md-6">
+                    <label>Your Name:</label>
+                    <input type="text" class="form-control transparent-field" id="name" name="name">
+                </div>
+                <div class="col-md-6">
+                    <label for="email_addr">Your Email:</label>
+                    <input type="email" class="form-control transparent-field" id="email_addr" name="email">
+                </div>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-success">Post</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container" id="listings" style="padding: 1px;">
+        <h1 class="text-center mb-4" style="margin-top: 50px;">Compact Apartment Listings</h1>
+        <div class="apartment-list">
+            <!-- Apartment 1 -->
+            <div class="apartment-card card">
+                <img src="img/studio.jpeg" class="card-img-top" alt="Sunny Meadows Studio">
+                <div class="card-header">
+                    <h5 class="card-title">Sunny Meadows Studio</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">A cozy studio apartment with ample natural light, a modern kitchen, nice
+                        and
+                        a charming balcony overlooking a serene garden.</p>
+                    <p class="price">$85.000</p>
+                </div>
+            </div>
+
+            <div class="apartment-card card">
+                <img src="img/studio1.jpg" class="card-img-top" alt="Urban Loft">
+                <div class="card-header">
+                    <h5 class="card-title">Urban Loft</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">A stylish loft with high ceilings, exposed brick walls, and large
+                        windows.
+                        Perfect for city living with easy access to local cafes and shops.</p>
+                    <p class="price">$80.000</p>
+                </div>
+            </div>
+
+            <div class="apartment-card card">
+                <img src="img/studio2.jpg" class="card-img-top" alt="Parkside One-Bedroom">
+                <div class="card-header">
+                    <h5 class="card-title">Parkside One-Bedroom</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Charming one-bedroom apartment located next to a beautiful park.
+                        Features
+                        include hardwood floors, a spacious bedroom, and a cozy living room.</p>
+                    <p class="price">$75.000</p>
+                </div>
+            </div>
+
+            <div class="apartment-card card">
+                <img src="img/studio3.jpeg" class="card-img-top" alt="Riverside Two-Bedroom">
+                <div class="card-header">
+                    <h5 class="card-title">Riverside Two-Bedroom</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Elegant two-bedroom apartment with stunning river views, a gourmet
+                        kitchen, and
+                        a large living area. Ideal for families or professionals.</p>
+                    <p class="price">$81.000</p>
+                </div>
+            </div>
+
+            <div class="apartment-card card">
+                <img src="img/studio4.jpeg" class="card-img-top" alt="Downtown Penthouse">
+                <div class="card-header">
+                    <h5 class="card-title">Downtown Penthouse</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Luxurious penthouse offering panoramic city views, a private rooftop
+                        terrace,
+                        and high-end finishes. Perfect for those seeking exclusivity.</p>
+                    <p class="price">$91.000</p>
+                </div>
+            </div>
+
+            <div class="apartment-card card">
+                <img src="img/studio5.jpeg" class="card-img-top" alt="Cozy Cottage Apartment">
+                <div class="card-header">
+                    <h5 class="card-title">Cozy Cottage Apartment</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">A charming one-bedroom apartment with a cottage-like feel. Features
+                        include a
+                        quaint kitchen, garden access, and a peaceful neighborhood.</p>
+                    <p class="price">$65.000</p>
+                </div>
+            </div>
+
+            <div class="apartment-card card">
+                <img src="img/studio6.jpg" class="card-img-top" alt="Modern High-Rise">
+                <div class="card-header">
+                    <h5 class="card-title">Modern High-Rise</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">A sleek apartment in a contemporary high-rise building with amenities
+                        like a gym, pool, and concierge service for your comfort.</p>
+                    <p class="price">$68.000</p>
+                </div>
+            </div>
+
+            <div class="apartment-card card">
+                <img src="img/studio7.jpg" class="card-img-top" alt="Historic Brownstone">
+                <div class="card-header">
+                    <h5 class="card-title">Historic Brownstone</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">A beautifully restored historic brownstone with original architectural
+                        details, high ceilings, beautiful view and a classic charm.</p>
+                    <p class="price">$72.000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="container my-4">
+        <div class="map-container my-3">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.529488852044!2d-122.42067968468105!3d37.77595167975914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f15e4d51b%3A0x14a0744b7a3e69d5!2s1600+Pine+St%2C+San+Francisco%2C+CA+94109%2C+USA!5e0!3m2!1sen!2sus!4v1643245943343!5m2!1sen!2sus"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 SpotlightLiving International Realty. All rights reserved.</p>
+
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
